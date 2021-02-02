@@ -1,0 +1,29 @@
+body {
+    display: grid;
+    grid-template: 
+    "header header header"
+    "sidebar main modal";
+    width: 100%;
+    height: auto;
+}
+.header {
+    display: flex;
+    align-items: center;
+    grid-area: header;
+    max-height: 20vh;
+}
+.header > * {
+    margin: 10px;
+}
+.main {
+    grid-area: main;
+    height: 100%;
+    width: 100%;
+}
+.sidebar {
+    grid-area: sidebar;
+    height: 100%;
+}
+.modal {
+    grid-area: modal;
+}
