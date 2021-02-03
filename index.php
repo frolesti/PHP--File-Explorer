@@ -13,6 +13,9 @@
         <input id="headerSearch" type="text">
     </header>
     <nav class="sidebar">
+        <?php
+            require('./assets/php/nav.php');
+        ?>
     </nav>
     <main class="main-container">
         <?php
