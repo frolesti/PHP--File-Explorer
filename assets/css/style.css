@@ -1,6 +1,6 @@
 body {
     display: grid;
-    grid-template: 
+    grid-template:
     "header header header"
     "sidebar main modal";
     width: 100%;
@@ -26,4 +26,14 @@ body {
 }
 .modal {
     grid-area: modal;
+}
+.folders-item{
+    display: flex;
+    width: 100px;
+    align-items: center;
+}
+.folders{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
