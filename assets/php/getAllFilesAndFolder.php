@@ -10,10 +10,16 @@
   }
   $files = scandir($root.$directory);
   $files = array_slice($files,2);
-  echo $root;
+  echo '<section>';
+  echo "<a href='?dir='>root</a>";
   if($breadcrums){
-    print_r( $breadcrums);
+    $acc='';
+    foreach ($breadcrums as $key => $value) {
+      $acc = $acc . '/' . $value ;
+      echo "<a href='?dir=$acc'>$value</a>";
+    }
   }
+  echo '</section>';
   echo "<h1 class='folders-title'>Folders</h1>";
   echo "<section class='folders'>";
   foreach ($files as $key => $value) {
