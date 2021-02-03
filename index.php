@@ -41,10 +41,8 @@
                 }
             }
             echo "</section>";
-            print_r($files);
         ?>
     </main>
-    
     <section class="modal"></section>
     <script src="assets/js/main.js"></script>
 </body>
