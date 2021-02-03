@@ -1,6 +1,6 @@
 <?php
 echo "<ul>";
-echo "<li><a href='?dir='>root</a></li>";
+echo "<li><a href='index.php'>root</a></li>";
 getAllFolderInRoot('');
 echo"</ul>";
 function getAllFolderInRoot($path){

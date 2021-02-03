@@ -1,3 +1,6 @@
+<?php
+include('./assets/php/helpers.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

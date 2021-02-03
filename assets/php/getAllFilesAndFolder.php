@@ -1,5 +1,4 @@
 <?php
-  include('helpers.php');
   $root = 'root/';
   if(empty($_GET['dir'])){
     $directory = '';
@@ -11,7 +10,7 @@
   $files = scandir($root.$directory);
   $files = array_slice($files,2);
   echo '<section class="root">';
-  echo "<a href='?dir='>root</a>";
+  echo "<a href='index.php'>root</a>";
   if($breadcrums){
     $acc='';
     foreach ($breadcrums as $key => $value) {
