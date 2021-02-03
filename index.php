@@ -10,7 +10,11 @@
 <body>
     <header class="header">
         <h1>PHP File Explorer</h1>
-        <input id="headerSearch" type="text">
+        <section class="searchBar">
+            <input id="headerSearch" type="text">
+            <button id="searchBtn">SEARCH</button>
+        </section>
+        
     </header>
     <nav class="sidebar">
         <?php

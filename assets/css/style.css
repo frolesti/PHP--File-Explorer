@@ -1,16 +1,26 @@
+@import "folders.css";
+
+* {
+}
 body {
+    color: black;
     display: grid;
     grid-template:
     "header header header"
     "sidebar main modal";
-    width: 100%;
     height: auto;
+    width: 100%;
 }
 .header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     grid-area: header;
     max-height: 20vh;
+    padding-left: 10vw;
+    padding-right: 20vw;
+    
+    background-color: gray;
 }
 .header > * {
     margin: 10px;
