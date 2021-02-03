@@ -13,7 +13,6 @@
         <input id="headerSearch" type="text">
     </header>
     <nav class="sidebar">
-        <button id="newContentBtn">NEW</button>
     </nav>
     <main class="main-container">
         <?php
