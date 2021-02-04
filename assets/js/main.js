@@ -23,15 +23,17 @@ const newFolder = (url) => {
   return template;
 };
 
-const uploadFile = () => {
+const uploadFile = (url) => {
   const template = `
   <section class="modal-content">
     <h1>New File</h1>
-    <form>
+    <form action="assets/php/createFile.php" method="post" enctype="multipart/form-data">
       <label for="newFile">
       Upload File
       <input type="file" id="newFile" name="newFile" required>
       </label>
+      <input type="hidden" name="MAX_FILE_SIZE" value="30000">
+      <input type="hidden" value="${url}" name="url">
       <input type="submit" value="upload">
     </form>
     <button id="closeModal">Cancel</button>
@@ -42,15 +44,15 @@ const uploadFile = () => {
 const openModal = (e) => {
   e.preventDefault();
   modal.classList.toggle("none");
+  const url = e.target.getAttribute("data-url");
   switch (e.target.id) {
     case "btnNewFolder":
-      let url = e.target.getAttribute("data-url")
       console.log(url)
       render(newFolder(url));
       addEventListenerModal();
       break;
     case "btnNewFile":
-      render(uploadFile());
+      render(uploadFile(url));
       addEventListenerModal();
       break;
   }

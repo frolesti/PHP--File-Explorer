@@ -5,7 +5,10 @@
     $breadcrums = false;
   }else{
     $directory = $_GET['dir'].'/';
-    $breadcrums = array_slice(explode('/', $directory),1);
+    $breadcrums = explode('/', $directory);
+    if($breadcrums[0] == ''){
+      $breadcrums = array_slice(explode('/', $directory),1);
+    }
     array_pop($breadcrums);
   }
   $files = scandir($root.$directory);
