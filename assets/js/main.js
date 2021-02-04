@@ -2,13 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const newFolderBtn = document.getElementById("btnNewFolder");
   const newFileBtn = document.getElementById("btnNewFile");
   const modal = document.getElementById("modal");
+  const modalCloseBtn = document.getElementById("closeModal")
   newFolderBtn.addEventListener("click", openModal);
   newFileBtn.addEventListener("click", openModal);
+  modalCloseBtn.addEventListener("click", closeModal);
 });
 
 const newFolder = (url) => {
   const template = `
   <section class="modal-content">
+  <span class="close" id="closeModal">&times;</span>
     <h1>New Folder</h1>
     <form action="assets/php/createDirectory.php" method="post">
       <label for="newFolder">
@@ -26,6 +29,7 @@ const newFolder = (url) => {
 const uploadFile = (url) => {
   const template = `
   <section class="modal-content">
+  <span class="close">&times;</span>
     <h1>New File</h1>
     <form action="assets/php/createFile.php" method="post" enctype="multipart/form-data">
       <label for="newFile">
@@ -47,7 +51,6 @@ const openModal = (e) => {
   const url = e.target.getAttribute("data-url");
   switch (e.target.id) {
     case "btnNewFolder":
-      console.log(url)
       render(newFolder(url));
       addEventListenerModal();
       break;

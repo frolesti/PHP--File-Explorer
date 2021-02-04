@@ -1,5 +1,4 @@
 <?php
-    
     $url = $_POST["url"];
     chdir("../../root/$url");
     $uploadFile = basename($_FILES['newFile']['name']);

@@ -1,5 +1,6 @@
 @import "folders.css";
 @import "breadcrums.css";
+@import "modal.css";
 
 * {
     box-sizing: border-box;
