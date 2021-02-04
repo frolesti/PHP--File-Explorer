@@ -5,20 +5,21 @@
     $breadcrums = false;
   }else{
     $directory = $_GET['dir'].'/';
-    $breadcrums = explode('/', $directory);
+    $breadcrums = array_slice(explode('/', $directory),1);
+    array_pop($breadcrums);
   }
   $files = scandir($root.$directory);
   $files = array_slice($files,2);
-  echo '<section class="breadcrums">';
-  echo "<a href='index.php'>root</a>";
+  echo '<ol class="breadcrums">';
+  echo "<li><a href='index.php'>root</a></li>";
   if($breadcrums){
     $acc='';
     foreach ($breadcrums as $key => $value) {
       $acc = $acc . '/' . $value ;
-      echo "<a href='?dir=$acc'>$value</a>";
+      echo "<li><a href='?dir=$acc'>$value</a></li>";
     }
   }
-  echo '</section>';
+  echo '</ol>';
   renderTable('Folder', $root, $directory, $files);
   renderTable('File', $root, $directory, $files);
 ?>
