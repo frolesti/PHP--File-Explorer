@@ -31,7 +31,7 @@
             ?>
         </section>
     </main>
-    <section class="modal none"></section>
+    <section class="modal none" id="modal"></section>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

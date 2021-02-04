@@ -1,7 +1,7 @@
 <?php
   function renderTable($type, $root, $directory, $files){
     $is_type = $type=="Folder"? "is_dir":"is_file";
-    renderTableTitle($type);
+    renderTableTitle($type, $directory);
     foreach ($files as $key => $value) {
       if($is_type($root.$directory.$value)){
           $icon = getIcon($type,$root.$directory.$value);
@@ -14,9 +14,9 @@
     }
     echo "</table>";
   }
-  function renderTableTitle($type){
+  function renderTableTitle($type, $url){
     echo "<h1 class='main-content__title'>$type</h1>";
-    echo "<button id='btnNew$type'>New $type</button>";
+    echo "<button id='btnNew$type' data-url='$url'>New $type</button>";
     echo "<table class='table'>";
     echo "<tr class='table__title'>
         <td>Icon:</td>
