@@ -2,10 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const newFolderBtn = document.getElementById("btnNewFolder");
   const newFileBtn = document.getElementById("btnNewFile");
   const modal = document.getElementById("modal");
-  const modalCloseBtn = document.getElementById("closeModal")
   newFolderBtn.addEventListener("click", openModal);
   newFileBtn.addEventListener("click", openModal);
-  modalCloseBtn.addEventListener("click", closeModal);
 });
 
 const newFolder = (url) => {
@@ -21,7 +19,7 @@ const newFolder = (url) => {
       </label>
       <input type="submit" value="create">
     </form>
-    <button id="closeModal">Cancel</button>
+    <button id="cancelModal">Cancel</button>
   </section>`;
   return template;
 };
@@ -40,7 +38,7 @@ const uploadFile = (url) => {
       <input type="hidden" value="${url}" name="url">
       <input type="submit" value="upload">
     </form>
-    <button id="closeModal">Cancel</button>
+    <button id="cancelModal">Cancel</button>
   </section>`;
   return template;
 };
@@ -71,8 +69,10 @@ const closeModal = (e) => {
   removeListenerModal()
 };
 const addEventListenerModal = () => {
-  document.getElementById("closeModal").addEventListener('click', closeModal);
+  document.getElementById("cancelModal").addEventListener('click', closeModal);
+  document.getElementById("closeModal").addEventListener('click', closeModal)
 }
 const removeListenerModal = () => {
+  document.getElementById("cancelModal").removeEventListener('click', closeModal);
   document.getElementById("closeModal").removeEventListener('click', closeModal);
 }
