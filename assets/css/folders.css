@@ -1,32 +1,12 @@
 /*Main Container Styling*/
-.main-container {
+.main {
     border-left: 2px solid rgb(173, 173, 173);
     border-right: 2px solid rgb(173, 173, 173);
     padding-left: 20px;
     padding-right: 20px;
+    width: 100%;
 }
-.root {
-    font-weight: 200;
-    font-size: 28px;
-    text-decoration: initial;
-}
-.folders-title, .files-title, #newFolderBtn, #newFileBtn {
-    margin-left: 10px;
-    margin-bottom: 10px;
-}
-.bx, .bxs-folder {
-    margin: 5px;
-}
-.folder-items, .file-items {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-}
-.folder-details, .file-details{
-    height: fit-content;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-    font-size: 10px;
+
+.table{
+    width: 100%;
 }

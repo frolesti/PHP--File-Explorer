@@ -5,4 +5,6 @@ const modal = document.getElementById('modal');
 newFolderBtn.addEventListener('click', openModal);
 newFileBtn.addEventListener('click', openModal);
 
-const openModal = e => {};
+const openModal = e => {
+  e.preventDefault();
+};

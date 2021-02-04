@@ -1,5 +1,6 @@
 <?php
-include('./assets/php/helpers.php');
+    include('./assets/php/helpers.php');
+    include('./assets/php/views.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,23 +14,24 @@ include('./assets/php/helpers.php');
 <body>
     <header class="header">
         <h1>PHP File Explorer</h1>
-        <section class="searchBar">
+        <form class="searchBar">
             <input id="headerSearch" type="text">
-            <button id="searchBtn">SEARCH</button>
-        </section>
-        
+            <input type="submit" id="searchBtn" value="Search">
+        </form>
     </header>
-    <nav class="sidebar">
-        <?php
-            require('./assets/php/nav.php');
-        ?>
-    </nav>
     <main class="main-container">
-        <?php
-            require('./assets/php/getAllFilesAndFolder.php');
-        ?>
+        <nav class="sidebar">
+            <?php
+                require('./assets/php/nav.php');
+            ?>
+        </nav>
+        <section class="main">
+            <?php
+                require('./assets/php/getAllFilesAndFolder.php');
+            ?>
+        </section>
     </main>
-    <section class="modal"></section>
+    <section class="modal none"></section>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

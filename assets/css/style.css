@@ -1,49 +1,33 @@
 @import "folders.css";
 
 * {
+    box-sizing: border-box;
 }
-body {
-    color: black;
-    display: grid;
-    grid-template:
-    "header header header"
-    "sidebar main modal";
-    height: auto;
-    width: 100%;
-}
+
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    grid-area: header;
-    max-height: 20vh;
-    padding-left: 10vw;
-    padding-right: 20vw;
-    
     background-color: gray;
 }
-.header > * {
-    margin: 10px;
-}
-.main {
-    grid-area: main;
+
+.main-container {
+    display: flex;
     height: 100%;
     width: 100%;
 }
 .sidebar {
-    grid-area: sidebar;
     height: 100%;
+    width: 20%;
 }
 .modal {
-    grid-area: modal;
-}
-.folders-item{
-    display: flex;
+    position: absolute;
     width: 100%;
-    align-items: center;
+    height: 100%;
+    top: 0;
 }
-.folders{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+
+
+.none{
+    display: none;
 }
