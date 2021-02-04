@@ -1,5 +1,6 @@
 <?php
     $url = $_POST["url"];
+    $url = substr($url, 0, -1);
     chdir("../../root/$url");
     $uploadFile = basename($_FILES['newFile']['name']);
     $head = $url == '' ? "Refresh: 0.2; URL=../../index.php":"Refresh: 0.2; URL=../../index.php?dir=$url";
@@ -14,7 +15,7 @@
             alert('There has been trouble with the uploading');
             </script>";
             header($head);
-        }    
+        }
     } else {
         echo "<script>
         alert('This file already exists!');
