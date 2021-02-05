@@ -1,12 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const newFolderBtn = document.getElementById("btnNewFolder");
-  const newFileBtn = document.getElementById("btnNewFile");
-  const modal = document.getElementById("modal");
-  newFolderBtn.addEventListener("click", openModal);
-  newFileBtn.addEventListener("click", openModal);
+document.addEventListener('DOMContentLoaded', () => {
+  const newFolderBtn = document.getElementById('btnNewFolder');
+  const newFileBtn = document.getElementById('btnNewFile');
+  const modal = document.getElementById('modal');
+  newFolderBtn.addEventListener('click', openModal);
+  newFileBtn.addEventListener('click', openModal);
 });
 
-const newFolder = (url) => {
+const newFolder = url => {
   const template = `
   <section class="modal-content">
   <span class="close" id="closeModal">&times;</span>
@@ -24,10 +24,10 @@ const newFolder = (url) => {
   return template;
 };
 
-const uploadFile = (url) => {
+const uploadFile = url => {
   const template = `
   <section class="modal-content">
-  <span class="close">&times;</span>
+  <span class="close" id="closeModal">&times;</span>
     <h1>New File</h1>
     <form action="assets/php/createFile.php" method="post" enctype="multipart/form-data">
       <label for="newFile">
@@ -43,36 +43,40 @@ const uploadFile = (url) => {
   return template;
 };
 
-const openModal = (e) => {
+const openModal = e => {
   e.preventDefault();
-  modal.classList.toggle("none");
-  const url = e.target.getAttribute("data-url");
+  modal.classList.toggle('none');
+  const url = e.target.getAttribute('data-url');
   switch (e.target.id) {
-    case "btnNewFolder":
+    case 'btnNewFolder':
       render(newFolder(url));
       addEventListenerModal();
       break;
-    case "btnNewFile":
+    case 'btnNewFile':
       render(uploadFile(url));
       addEventListenerModal();
       break;
   }
 };
 
-const render = (template, location = "#modal") => {
+const render = (template, location = '#modal') => {
   document.querySelector(location).innerHTML = template;
 };
 
-const closeModal = (e) => {
+const closeModal = e => {
   e.preventDefault();
-  modal.classList.toggle("none");
-  removeListenerModal()
+  modal.classList.toggle('none');
+  removeListenerModal();
 };
 const addEventListenerModal = () => {
-  document.getElementById("cancelModal").addEventListener('click', closeModal);
-  document.getElementById("closeModal").addEventListener('click', closeModal)
-}
+  document.getElementById('cancelModal').addEventListener('click', closeModal);
+  document.getElementById('closeModal').addEventListener('click', closeModal);
+};
 const removeListenerModal = () => {
-  document.getElementById("cancelModal").removeEventListener('click', closeModal);
-  document.getElementById("closeModal").removeEventListener('click', closeModal);
-}
+  document
+    .getElementById('cancelModal')
+    .removeEventListener('click', closeModal);
+  document
+    .getElementById('closeModal')
+    .removeEventListener('click', closeModal);
+};
