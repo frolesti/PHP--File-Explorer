@@ -1,4 +1,5 @@
 <?php
+
 function folderSize($dir)
 {
   $size = 0;

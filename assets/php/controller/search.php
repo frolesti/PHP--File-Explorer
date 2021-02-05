@@ -1,6 +1,6 @@
 <?php
 $searchValue = $_GET['searchValue'];
-chdir("../../");
+chdir("../../../");
 search($searchValue);
 
 function search($searchedItem)

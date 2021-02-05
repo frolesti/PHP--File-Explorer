@@ -1,6 +1,7 @@
 <?php
-require('./assets/php/helpers.php');
-require('./assets/php/views.php');
+require('./assets/php/helpers/helpers.php');
+require('./assets/php/view/views.php');
+require('./assets/php/models/model.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,20 +17,20 @@ require('./assets/php/views.php');
 <body>
     <header class="header">
         <h1>PHP File Explorer</h1>
-        <form class="searchBar" action="./assets/php/search.php" method="get">
-            <input id="headerSearch" type="text" name="searchValue">
+        <form class="searchBar" action="./assets/php/controller/search.php" method="get">
+            <input id="headerSearch" type="text" name="searchValue" required>
             <input type="submit" id="searchBtn" value="Search">
         </form>
     </header>
     <main class="main-container">
         <nav class="sidebar">
             <?php
-            require('./assets/php/nav.php');
+            require('./assets/php/controller/nav.php');
             ?>
         </nav>
         <section class="main">
             <?php
-            require('./assets/php/getAllFilesAndFolder.php');
+            require('./assets/php/controller/getAllFilesAndFolder.php');
             ?>
         </section>
     </main>

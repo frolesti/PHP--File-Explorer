@@ -11,7 +11,7 @@ function getAllFolderInRoot($path)
     if (count($manager) > 2) {
       $manager = array_slice($manager, 2);
       echo "<ul>";
-      foreach ($manager as $key => $value) {
+      foreach ($manager as $value) {
         $pathShort = $path . "/" . $value;
         if (is_dir($root . $pathShort)) {
           echo "<li><a href='?dir=$pathShort'>$value</a></li>";
@@ -20,7 +20,5 @@ function getAllFolderInRoot($path)
       }
       echo "</ul>";
     }
-  } else {
-    echo "No es una path de directorio valida<br/>";
   }
 }
