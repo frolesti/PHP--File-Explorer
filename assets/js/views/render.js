@@ -5,13 +5,9 @@ export const render = (template, location = '#modal') => {
 };
 
 export const addEventListenerModal = () => {
-  document.getElementById('cancelModal').addEventListener('click', closeModal);
   document.getElementById('closeModal').addEventListener('click', closeModal);
 };
 export const removeListenerModal = () => {
-  document
-    .getElementById('cancelModal')
-    .removeEventListener('click', closeModal);
   document
     .getElementById('closeModal')
     .removeEventListener('click', closeModal);

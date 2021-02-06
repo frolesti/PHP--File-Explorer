@@ -11,7 +11,6 @@ export const newFolder = url => {
       </label>
       <input type="submit" value="create">
     </form>
-    <button id="cancelModal">Cancel</button>
   </section>`;
   return template;
 };

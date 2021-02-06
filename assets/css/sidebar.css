@@ -1,0 +1,6 @@
+.sidebar {
+  position: absolute;
+}
+.sidebar li {
+  list-style-image: url('../scr/icons/svg/folder.svg');
+}

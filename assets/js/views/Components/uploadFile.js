@@ -12,7 +12,6 @@ export const uploadFile = url => {
       <input type="hidden" value="${url}" name="url">
       <input type="submit" value="upload">
     </form>
-    <button id="cancelModal">Cancel</button>
   </section>`;
   return template;
 };

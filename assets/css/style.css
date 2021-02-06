@@ -1,35 +1,105 @@
-@import "folders.css";
-@import "breadcrums.css";
-@import "modal.css";
+@import 'tables.css';
+@import 'breadcrums.css';
+@import 'modal.css';
+@import 'sidebar.css';
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  background-size: cover;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+a,
+a:link,
+a:hover,
+a:visited {
+  text-decoration: none;
 }
 
 .header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: gray;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(50, 50, 50, 0.5);
+}
+.searchBar {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.searchBar__input {
+  width: 100%;
+  padding: 0.2rem 1rem;
+  background-color: rgba(20, 20, 20, 0.7);
+  border-radius: 0.5rem;
+  border: none;
+  height: 1.5rem;
+  color: white;
+}
+.searchBar__submit {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  height: 1.5rem;
+  min-height: 44px;
+  text-align: center;
+}
+.searchBar__input:hover,
+.searchBar__input:focus {
+  background-color: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(251, 127, 36, 0.9);
+  outline: none;
+}
+.buttonShowMenu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: fixed;
+  top: 2rem;
+  left: 1rem;
+  opacity: 0.5;
+  width: 44px;
+  height: 44px;
+}
+.buttonShowMenu:hover {
+  opacity: 1;
 }
 
 .main-container {
-    display: flex;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 200%;
+  width: 100%;
+  background-color: rgba(50, 50, 50, 0.5);
 }
-.sidebar {
-    height: 100%;
-    width: 20%;
-}
-.modal {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
+.main {
+  width: 90%;
+  max-width: 1200px;
 }
 
+.none {
+  display: none;
+}
 
-.none{
-    display: none;
+@media screen and (min-width: 600px) {
+  .searchBar {
+    flex-direction: row;
+  }
 }

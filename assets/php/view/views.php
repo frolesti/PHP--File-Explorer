@@ -4,10 +4,11 @@ function renderTableTitle($type, $url = false)
 {
   $template = "<h1 class='main-content__title'>$type</h1>";
   if ($type != 'Search') {
-    $template = $template . "<button id='btnNew$type' data-url='$url'>New $type</button>";
+    $class = ($type == 'Folder') ? 'bx bxs-folder-plus' : 'bx bx-upload';
+    $template = $template . "<button class='buttonNew $class' id='btnNew$type' data-url='$url'></button>";
   }
   $template = $template .
-    "<table class='table'>
+    "<table class='table $type'>
       <tr class='table__title'>
         <td>Icon:</td>
         <td>$type Name:</td>
@@ -19,8 +20,8 @@ function renderTableTitle($type, $url = false)
 }
 function renderTableContent($data)
 {
-  $template = "<tr class='" . $data['type'] . "-items'>
-          <td class='" . $data['icon'] . "'></td>";
+  $template = "<tr class='" . $data['type'] . "-items'>";
+  $template = "<td class='icon-container'><img class='icon-img' src='./assets/scr/icons/svg/" . $data['icon'] . ".svg'></td>";
   if ($data['type'] == 'Folder') {
     $template = $template . "<td><a href='?dir=" . $data['url'] . "'>" . $data['name'] . "</a></td>";
   } else {

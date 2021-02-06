@@ -1,7 +1,6 @@
 <?php
 function search($searchedItem)
 {
-  //chdir("../../../");
   $path = 'root';
   $results = array();
   $dir = new RecursiveDirectoryIterator($path, RecursiveDirectoryIterator::SKIP_DOTS);
