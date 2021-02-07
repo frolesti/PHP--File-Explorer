@@ -9,7 +9,7 @@ export const newFolder = url => {
       <input type="text" id="newFolder" name="newFolder" minlength="1" required>
       <input type="hidden" value="${url}" name="url">
       </label>
-      <input type="submit" value="create">
+      <input class="button" type="submit" value="create">
     </form>
   </section>`;
   return template;

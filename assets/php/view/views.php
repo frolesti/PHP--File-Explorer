@@ -10,22 +10,22 @@ function renderTableTitle($type, $url = false)
   $template = $template .
     "<table class='table $type'>
       <tr class='table__title'>
-        <td>Icon:</td>
-        <td>$type Name:</td>
-        <td>Creation Date:</td>
-        <td>Modification Date:</td>
-        <td>$type Size:</td>
+        <th>Edit:</th>
+        <th>$type Name:</th>
+        <th>Creation Date:</th>
+        <th>Modification Date:</th>
+        <th>$type Size:</th>
       </tr>";
   return $template;
 }
 function renderTableContent($data)
 {
   $template = "<tr class='" . $data['type'] . "-items'>";
-  $template = "<td class='icon-container'><img class='icon-img' src='./assets/scr/icons/svg/" . $data['icon'] . ".svg'></td>";
+  $template = "<td class='icon-container'><img class='icon-img edit' data-url='" . $data['url'] . "' data-type='" . $data['icon'] . "' src='./assets/scr/icons/svg/" . $data['icon'] . ".svg'></td>";
   if ($data['type'] == 'Folder') {
     $template = $template . "<td><a href='?dir=" . $data['url'] . "'>" . $data['name'] . "</a></td>";
   } else {
-    $template = $template . "<td data-url=" . $data['url'] . "'>" . $data['name'] . "</td>";
+    $template = $template . "<td class='edit' data-type='" . $data['icon'] . "' data-url='" . $data['url'] . "'>" . $data['name'] . "</td>";
   }
   $template = $template . "<td>" . $data['timeCreate'] . "</td>
           <td>" . $data['timeModificate'] . "</td>

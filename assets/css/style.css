@@ -49,17 +49,21 @@ a:visited {
   background-color: rgba(20, 20, 20, 0.7);
   border-radius: 0.5rem;
   border: none;
-  height: 1.5rem;
+  height: 2rem;
   color: white;
 }
 .searchBar__submit {
   background-color: transparent;
   border: none;
   font-weight: bold;
-  height: 1.5rem;
+  height: 2rem;
   min-height: 44px;
   text-align: center;
   font-size: 1rem;
+}
+.searchBar__submit:hover {
+  color: rgba(251, 127, 36, 0.9);
+  cursor: pointer;
 }
 .searchBar__input:hover,
 .searchBar__input:focus {
@@ -78,11 +82,14 @@ a:visited {
   opacity: 0.5;
   width: 44px;
   height: 44px;
+  z-index: 2;
 }
 .buttonShowMenu:hover {
   opacity: 1;
 }
-
+.fullOpacity {
+  opacity: 1;
+}
 .main-container {
   display: flex;
   justify-content: center;

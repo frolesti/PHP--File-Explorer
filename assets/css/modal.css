@@ -20,7 +20,7 @@
   animation-duration: 0.8s;
 }
 
-.modal-content * {
+.modal-content form * {
   margin: 5px;
 }
 .close {
@@ -39,7 +39,18 @@
   text-decoration: none;
   cursor: pointer;
 }
-
+.button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 auto;
+  width: 100%;
+}
+.button:hover {
+  color: rgba(251, 127, 36, 0.8);
+}
 @-webkit-keyframes animatetop {
   from {
     top: -300px;

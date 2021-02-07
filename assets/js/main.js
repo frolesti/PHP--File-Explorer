@@ -1,7 +1,6 @@
-import { openModal } from './dispatcher/dispatcher.js';
+import { openModal, showNav } from './dispatcher/dispatcher.js';
+import { addMainEventListener } from './views/render.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('btnNewFolder').addEventListener('click', openModal);
-  document.getElementById('btnNewFile').addEventListener('click', openModal);
-  document.querySelector('.File').addEventListener('click', openModal);
+  addMainEventListener();
 });

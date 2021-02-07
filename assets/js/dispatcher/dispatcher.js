@@ -12,13 +12,16 @@ export const openModal = e => {
       case 'btnNewFile':
         createFileContent(url);
         break;
-      case '': //case File click
-        console.log(e.target.textContent);
-        const ext = e.target.textContent
-          .slice(e.target.textContent.length - 5)
-          .split('.')[1];
-
+      case '': //case File Name or Icon click
+        createData(e.target, url); //TODO terminar el crear datos
+        //TODO crear metodo de render
         break;
     }
   }
+};
+
+export const showNav = e => {
+  e.preventDefault();
+  document.querySelector('.sidebar').classList.toggle('none');
+  e.target.classList.toggle('fullOpacity');
 };

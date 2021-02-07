@@ -31,12 +31,17 @@ if (isset($_GET['searchValue'])) {
   echo renderTable('File', $root, $directory);
 } else {
   $directory = $_GET['dir'] . '/';
-  $breadcrums = explode('/', $directory);
-  if ($breadcrums[0] == '') {
-    $breadcrums = array_slice(explode('/', $directory), 1);
+  if (strpos($directory, "/") == 0 && strpos($directory, ".") == 1) {
+    echo "<script>alert('This is not a valid path');</script>";
+    header("Refresh: 0; URL=index.php");
+  } else {
+    $breadcrums = explode('/', $directory);
+    if ($breadcrums[0] == '') {
+      $breadcrums = array_slice(explode('/', $directory), 1);
+    }
+    array_pop($breadcrums);
+    echo renderBreadcrums($breadcrums);
+    echo renderTable('Folder', $root, $directory);
+    echo renderTable('File', $root, $directory);
   }
-  array_pop($breadcrums);
-  echo renderBreadcrums($breadcrums);
-  echo renderTable('Folder', $root, $directory);
-  echo renderTable('File', $root, $directory);
 }

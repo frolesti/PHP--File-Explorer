@@ -10,7 +10,7 @@ export const uploadFile = url => {
       </label>
       <input type="hidden" name="MAX_FILE_SIZE" value="30000">
       <input type="hidden" value="${url}" name="url">
-      <input type="submit" value="upload">
+      <input class="button" type="submit" value="upload">
     </form>
   </section>`;
   return template;
