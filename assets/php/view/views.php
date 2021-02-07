@@ -36,7 +36,7 @@ function renderTableContent($data)
 
 function renderBreadcrums($breadcrums)
 {
-  $template = "<ol class='breadcrums'><li><a href='index.php'>root</a></li>";
+  $template = "<ol class='breadcrums'><li><a href='index.php' class='bx bxs-home'></a></li>";
   if ($breadcrums) {
     $acc = '';
     foreach ($breadcrums as $value) {
