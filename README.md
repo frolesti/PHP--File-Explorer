@@ -18,7 +18,7 @@ In order to deploy this project you'll need to iniciate your PHP server from a s
 
 ## First Concept
 
-<img src="./assets/src/figma/figma.png">
+<img src="./assets/src/figma/Figma.png">
 
 ## Versioning
 
