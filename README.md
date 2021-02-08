@@ -16,6 +16,9 @@ In order to deploy this project you'll need to iniciate your PHP server from a s
 * [PHP 7](https://www.php.net/manual/es/intro-whatis.php) - The web framework used
 * [XAMPP](https://www.apachefriends.org/es/index.html) - Server Management
 
+## First Concept
+
+![Figma file with the project structure](https://github.com/frolesti/PHP--File-Explorer/blob/main/figma.jpg?raw=true)
 
 ## Versioning
 
