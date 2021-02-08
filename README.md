@@ -23,8 +23,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* *José Serralvo Rojo* - *Initial work* - [Github Profile](https://github.com/joserra-15)
-* *Froilán Olesti Casas* - *Initial work* - [Github Profile](https://github.com/frolesti)
+* **José Serralvo Rojo** - *Initial work* - [Github Profile](https://github.com/joserra-15)
+* **Froilán Olesti Casas** - *Initial work* - [Github Profile](https://github.com/frolesti)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
