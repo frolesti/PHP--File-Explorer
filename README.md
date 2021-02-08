@@ -16,6 +16,9 @@ In order to deploy this project you'll need to iniciate your PHP server from a s
 * [PHP 7](https://www.php.net/manual/es/intro-whatis.php) - The web framework used
 * [XAMPP](https://www.apachefriends.org/es/index.html) - Server Management
 
+## First Concept
+
+![Figma file with the project structure](https://github.com/frolesti/PHP--File-Explorer/blob/main/figma.jpg?raw=true)
 
 ## Versioning
 
@@ -23,8 +26,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* ** José Serralvo Rojo** - *Initial work* - [Github Profile](https://github.com/joserra-15)
-* ** Froilán Olesti Casas** - *Initial work* - [Github Profile](https://github.com/frolesti)
+* **José Serralvo Rojo** - *Initial work* - [Github Profile](https://github.com/joserra-15)
+* **Froilán Olesti Casas** - *Initial work* - [Github Profile](https://github.com/frolesti)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
