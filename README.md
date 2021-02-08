@@ -17,7 +17,7 @@ In order to deploy this project you'll need to iniciate your PHP server from a s
 * [XAMPP](https://www.apachefriends.org/es/index.html) - Server Management
 
 ## First Concept
-![First Concept Image](https://github.com/frolesti/PHP--File-Explorer/blob/main/Figma.jpg?raw=true)
+![First Concept Image](https://github.com/frolesti/PHP--File-Explorer/blob/main/Figma.png?raw=true)
 
 ## Versioning
 
