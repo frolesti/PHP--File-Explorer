@@ -1,4 +1,8 @@
-import { createFileContent, createFolderContent } from '../store/store.js';
+import {
+  createData,
+  createFileContent,
+  createFolderContent,
+} from '../store/store.js';
 
 export const openModal = e => {
   e.preventDefault();
@@ -13,8 +17,10 @@ export const openModal = e => {
         createFileContent(url);
         break;
       case '': //case File Name or Icon click
-        createData(e.target, url); //TODO terminar el crear datos
-        //TODO crear metodo de render
+        console.log(e);
+        axios.get('./assets/php/helpers/getAllPaths.php').then(({ data }) => {
+          createData(e.target, url, data);
+        });
         break;
     }
   }

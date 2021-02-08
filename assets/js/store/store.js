@@ -1,3 +1,5 @@
+import { transfomData } from '../helpers/helpers.js';
+import { editFileOrFolder } from '../views/Components/editFileOrFolder.js';
 import { newFolder } from '../views/Components/newFolder.js';
 import { uploadFile } from '../views/Components/uploadFile.js';
 import {
@@ -18,5 +20,10 @@ export const createFolderContent = url => {
 };
 export const createFileContent = url => {
   render(uploadFile(url));
+  addEventListenerModal();
+};
+
+export const createData = (target, url, optionsResults) => {
+  render(editFileOrFolder(transfomData(target, url, optionsResults)));
   addEventListenerModal();
 };

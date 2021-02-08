@@ -2,9 +2,8 @@ export const uploadFile = url => {
   const template = `
   <section class="modal-content">
   <span class="close" id="closeModal">&times;</span>
-    <h1>New File</h1>
-    <form action="index.php" method="post" enctype="multipart/form-data">
-      <label for="newFile">
+    <form class='form-item' action="index.php" method="post" enctype="multipart/form-data">
+      <label class="label-upload" for="newFile">
       Upload File
       <input type="file" id="newFile" name="newFile" required>
       </label>
