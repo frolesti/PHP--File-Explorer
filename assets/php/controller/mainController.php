@@ -24,6 +24,20 @@ if (isset($_GET['searchValue'])) {
     echo createFile($uploadFile);
   }
   header($head);
+} else if (isset($_GET['renameUrl'])) {
+  echo renameItem($_GET["renameUrl"], $_GET["newName"]);
+  $file = urldecode($_GET["renameUrl"]);
+  $positionToCut = strripos($file, "/");
+  $url = substr($file, 0, $positionToCut);
+  $head = $url == "" ? "Refresh: 0; URL=index.php" : "Refresh: 0; URL=index.php?dir=$url";
+  header($head);
+} else if (isset($_GET['moveFileOrfolder'])) {
+  echo moveItem($_GET["moveFileOrfolder"], $_GET["urlToMove"]);
+  $file = urldecode($_GET["moveFileOrfolder"]);
+  $positionToCut = strripos($file, "/");
+  $url = substr($file, 0, $positionToCut);
+  $head = $url == "" ? "Refresh: 0; URL=index.php" : "Refresh: 0; URL=index.php?dir=$url";
+  header($head);
 } else if (empty($_GET['dir'])) {
   $directory = '';
   echo renderBreadcrums(false);

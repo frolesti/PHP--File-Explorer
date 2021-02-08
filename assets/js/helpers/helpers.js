@@ -15,7 +15,7 @@ export const transfomData = (target, url, optionsResults) => {
     modification: cells[3].textContent,
     size: cells[4].textContent,
     type: getType(ext),
-    optionsPaths: optionsMove(url, optionsResults),
+    optionsPaths: optionsMove(optionsResults),
   };
   return obj;
 };

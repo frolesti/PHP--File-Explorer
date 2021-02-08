@@ -17,7 +17,6 @@ export const openModal = e => {
         createFileContent(url);
         break;
       case '': //case File Name or Icon click
-        console.log(e);
         axios.get('./assets/php/helpers/getAllPaths.php').then(({ data }) => {
           createData(e.target, url, data);
         });

@@ -7,6 +7,8 @@ require('./assets/php/models/createFolder.php');
 require('./assets/php/models/createFile.php');
 require('./assets/php/models/getAllFolder.php');
 require('./assets/php/models/renderTable.php');
+require('./assets/php/models/moveItem.php');
+require('./assets/php/models/renameItem.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
