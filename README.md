@@ -18,7 +18,7 @@ In order to deploy this project you'll need to iniciate your PHP server from a s
 
 ## First Concept
 
-![Figma file with the project structure](https://github.com/frolesti/PHP--File-Explorer/blob/main/figma.jpg?raw=true)
+![Figma file with the project structure](https://github.com/frolesti/PHP--File-Explorer/blob/main/assets/src/figma/figma.jpg?raw=true)
 
 ## Versioning
 
