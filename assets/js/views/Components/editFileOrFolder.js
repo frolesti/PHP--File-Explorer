@@ -40,19 +40,19 @@ export const editFileOrFolder = ({
   }
   template += `
   <section class="item__form">
-    <form class="form-item" action="" method="">
+    <form class="form-item" action="index.php" method="get">
       <input type="hidden" id="renameUrl" name="renameUrl" value="${url}">
       <label for="newName">New name:</label>
       <input type="text" id="newName" name="newName">
       <input type="submit" class="button" value="Rename">
     </form>
-    <form class="form-item" action="" method="">
+    <form class="form-item" action="index.php" method="get">
       <input type="hidden" id="moveUrl" name="moveFileOrfolder" value="${url}">
       <label for="urlToMove">Do you want to move?</label>
       <select name="urlToMove" id="urlToMove">${optionsPaths}</select>
       <input type="submit" class="button" value="Move">
     </form>
-    <form class="form-item" action="" method="">
+    <form class="form-item" action="index.php" method="get">
       <input type="hidden" id="removeUrl" name="removeUrl" value="${url}">
       <label>Do you want to remove?</label>
       <input type="submit" class="button" value="Remove">

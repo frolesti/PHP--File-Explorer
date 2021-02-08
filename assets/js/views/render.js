@@ -14,8 +14,15 @@ export const removeListenerModal = () => {
     .removeEventListener('click', closeModal);
 };
 export const addMainEventListener = () => {
-  document.getElementById('btnNewFolder').addEventListener('click', openModal);
-  document.getElementById('btnNewFile').addEventListener('click', openModal);
+  if (
+    document.getElementById('btnNewFolder') &&
+    document.getElementById('btnNewFile')
+  ) {
+    document
+      .getElementById('btnNewFolder')
+      .addEventListener('click', openModal);
+    document.getElementById('btnNewFile').addEventListener('click', openModal);
+  }
   document
     .querySelectorAll('.edit')
     .forEach(element => element.addEventListener('click', openModal));
