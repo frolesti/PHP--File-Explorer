@@ -17,8 +17,16 @@ In order to deploy this project you'll need to iniciate your PHP server from a s
 * [XAMPP](https://www.apachefriends.org/es/index.html) - Server Management
 
 ## First Concept
+
+First interface design. It ended up being something entirely different.
+
 ![First Concept Image](https://github.com/frolesti/PHP--File-Explorer/blob/main/Figma.png?raw=true)
 
+## User Actions Diagram
+
+Here you can appreciate all user's possibilities when using this file explorer.
+
+![User Actions Diagram](https://github.com/frolesti/PHP--File-Explorer/blob/main/UserActionsDiagram.png?raw=true)
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
