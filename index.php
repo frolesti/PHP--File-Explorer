@@ -1,6 +1,7 @@
 <?php
 require('./assets/php/helpers/helpers.php');
 require('./assets/php/helpers/searchHelper.php');
+require('./assets/php/helpers/removeItemHelper.php');
 require('./assets/php/view/views.php');
 require('./assets/php/models/search.php');
 require('./assets/php/models/createFolder.php');
@@ -9,6 +10,7 @@ require('./assets/php/models/getAllFolder.php');
 require('./assets/php/models/renderTable.php');
 require('./assets/php/models/moveItem.php');
 require('./assets/php/models/renameItem.php');
+require('./assets/php/models/removeItem.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -38,3 +38,12 @@ function getDataFileOrFolder($type, $root, $directory, $value)
   $url = urlencode($directory . $value);
   return array('type' => $type, 'name' => $value, 'icon' => $icon, 'timeCreate' => $timeCreate, 'timeModificate' => $timeModificate, 'fileSize' => $fileSize, 'url' => $url);
 }
+
+function redirect($path)
+{
+  $file = urldecode($path);
+  $positionToCut = strripos($file, "/");
+  $url = substr($file, 0, $positionToCut);
+  $head = $url == "" ? "Refresh: 0; URL=index.php" : "Refresh: 0; URL=index.php?dir=$url";
+  header($head);
+}
