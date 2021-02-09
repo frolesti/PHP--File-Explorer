@@ -10,10 +10,10 @@ export const transfomData = (target, url, optionsResults) => {
   const obj = {
     url: url,
     ext: ext,
-    name: cells[1].textContent,
-    creation: cells[2].textContent,
-    modification: cells[3].textContent,
-    size: cells[4].textContent,
+    name: cells[1] && cells[1].textContent,
+    creation: cells[2] && cells[2].textContent,
+    modification: cells[3] && cells[3].textContent,
+    size: cells[4] && cells[4].textContent,
     type: getType(ext),
     optionsPaths: optionsMove(optionsResults),
   };
